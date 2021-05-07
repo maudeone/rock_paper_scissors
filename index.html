@@ -3,9 +3,37 @@
 <head>
   <title>Page Title</title>
   <meta charset="UTF-8"/>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Lacquer&family=Roboto&display=swap"
+      rel="stylesheet">
 </head>
 <body>
-    <p>Hello</p>
+  <div class='flex'>
+    <h1>Rock Paper Scissors</h1>
+    <h2>First to 5 Wins!</h2>
+     
+    <div>
+      <div id='0' class='optionBtn'>Rock</div>
+      <div id='1' class='optionBtn'>Paper</div>
+      <div id='2' class='optionBtn'>Scissor</div>
+    </div>
+    <div class='labels'>
+      <span id='playerLabel'>Player Score</span>
+      <span id='compLabel'>Computer Score</span>
+    </div>
+    <div class='scores'>
+      <div id='playerScore'></div>
+      <div id='compScore'></div>
+    </div>
+    <div>
+      <span id='resultsLabel'>Results</span>
+    </div>
+
+    <div id ='roundResults'></div>
+    <div>
+      <button id='reset'>Play Again!</button>
+    </div>
+  </div>  
     <script src="app.js"></script>
 </body>
 </html>
