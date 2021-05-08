@@ -15,42 +15,41 @@ function getPlayerChoice(e) {
   playRound(playerChoice, );
 }
 
-    function computerPlay() {
-    let choices = ["Rock", "Paper", "Scissor"];
-    return choices[Math.floor(Math.random() * choices.length)];
-    }
+function computerPlay() {
+  let choices = ["Rock", "Paper", "Scissors"];
+  return choices[Math.floor(Math.random() * choices.length)];
+}
   
-    function playRound(playerChoice, compChoice) {
-    console.log("You choose ", playerChoice);
-    compChoice = computerPlay();
-    console.log("Computer choose ", compChoice);  
-    if (playerChoice == compChoice) {
-      playerScore = playerScore;
-      compScore = compScore;
-      console.log("Tie!", playerScore, compScore);
-      playerPoints.textContent = playerScore;
-      computerPoints.textContent = compScore;
-      roundResults.textContent = "Tied this round!";
-
-   
-    } else if (
-      (playerChoice == "Rock" && compChoice == "Scissor") || (playerChoice == "Paper" && compChoice == "Rock") || (playerChoice == "Scissor" && compChoice == "Paper")
-      ) {   
-        playerScore = ++playerScore;
-        console.log("You win round", playerScore, compScore);
-        playerPoints.textContent = playerScore;
-        roundResults.textContent = "You Win round!";
+function playRound(playerChoice, compChoice) {
+  console.log("You choose ", playerChoice);
+  compChoice = computerPlay();
+  console.log("Computer choose ", compChoice);  
+  if (playerChoice == compChoice) {
+    playerScore = playerScore;
+    compScore = compScore;
+    console.log("Tie!", playerScore, compScore);
+    playerPoints.textContent = playerScore;
+    computerPoints.textContent = compScore;
+    roundResults.textContent = `Tied! ${playerChoice} ties ${compChoice}.`;   
+  
+  } else if (
+    (playerChoice == "Rock" && compChoice == "Scissors") || (playerChoice == "Paper" && compChoice == "Rock") || (playerChoice == "Scissors" && compChoice == "Paper")
+    ) {   
+    playerScore = ++playerScore;
+    console.log("You win round", playerScore, compScore);
+    playerPoints.textContent = playerScore;
+    roundResults.textContent = `You win! ${playerChoice} beats ${compChoice}.`;
     
-    } else if (
-      (playerChoice == "Rock" && compChoice == "Paper") || (playerChoice == "Paper" && compChoice == "Scissor") || (playerChoice == "Scissor" && compChoice == "Rock")
-      ) {
-        compScore = ++compScore;
-        console.log("You lose round ", playerScore, compScore);   
-        computerPoints.textContent = compScore;
-        roundResults.textContent = "You Lose round!";  
-    }
-    gameCheck();
-    }
+  } else if (
+    (playerChoice == "Rock" && compChoice == "Paper") || (playerChoice == "Paper" && compChoice == "Scissors") || (playerChoice == "Scissors" && compChoice == "Rock")
+    ) {
+    compScore = ++compScore;
+    console.log("You lose round ", playerScore, compScore);   
+    computerPoints.textContent = compScore;
+    roundResults.textContent = `You lose! ${compChoice} beats ${playerChoice}.`;  
+  }
+gameCheck();
+}
 function gameCheck() {
   if (compScore < 5 && playerScore < 5) {
 

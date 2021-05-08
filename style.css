@@ -8,6 +8,17 @@ html {
     src: url(https://fonts.gstatic.com/s/lacquer/v5/EYqzma1QwqpG4_BBN7iKXw.woff2) format('woff2');
 }
 /* make it all fit to page*/
+header {
+    background-color: black;
+    background-image: url(imgs/skullTrim.jpg);
+    height: 150px;
+    width: 100%;
+    overflow: hidden;
+}
+img {
+    height: 150px;
+    width: 1880px;
+}
 .flex {
     display: flex;
     height: 100%;
@@ -37,6 +48,7 @@ h2 {
     border: 4px solid #001e5e;
     width: 150px;
     height: 50px;
+    font-family: lacquer, cursive, sans-serif;
     font-size: 30px;
     font-weight: bold;
     color: #001e5e;
@@ -60,11 +72,13 @@ h2 {
     width: 150px;
     height: 50px;
     border: 5px solid #001e5e;
+    color: #001e5e;
     margin-top: 3px;
     margin-bottom: 20px;
     margin-right: 5px;
+    font-family: lacquer, cursive, sans-serif;
     font-weight: bolder;
-    font-size: 20px;
+    font-size: 26px;
     
     }    
 #reset {
@@ -77,28 +91,29 @@ h2 {
     font-size: 28px;
     font-weight: bold;
     border-radius: 50%;
+    margin-bottom: 50px;
     }    
 #playerLabel {
-    font-size: 19px;
+    font-size: 20px;
     font-weight: bold;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: lacquer, cursive, sans-serif;
     color: #001e5e;
     padding-left: 15px;
     } 
 #compLabel {
-    font-size: 19px;
+    font-size: 20px;
     text-align: center;
     font-weight: bold;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: lacquer, cursive, sans-serif;
     color: #001e5e;
     padding-left: 18px;
     padding-right: 3px;
     }
 #resultsLabel {
-    font-size: 19px;
+    font-size: 20px;
     text-align: center;
     font-weight: bold;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: lacquer, cursive, sans-serif;
     color: #001e5e;
     }
 #roundResults {
@@ -108,7 +123,9 @@ h2 {
     width: 300px;
     height: 100px;
     border: 5px solid #001e5e;
+    color: #001e5e;
     text-align: center;
-    font-weight: bolder;
-    font-size: 20px;
+    font-family: lacquer, cursive, sans-serif;
+    font-weight: bold;
+    font-size: 26px;
     }
